@@ -44,6 +44,8 @@ function renderGrafica(data) {
   };
   const canvas = document.querySelector("#myChar");
   canvas.style.backgroundColor = "white";
+  canvas.style.height = "450px";
+  canvas.style.width = "800px";
   if (myChart) {
     myChart.destroy();
   }

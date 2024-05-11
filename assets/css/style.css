@@ -13,8 +13,7 @@ body {
 }
 
 hr {
-  width: 70%;
-  size: 20px;
+  width: 60%;
 }
 
 .box {
@@ -56,7 +55,8 @@ hr {
 
 .graficoCss {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 700px;
-  width: 500px;
+  align-items: center;
+  width: 100%;
 }

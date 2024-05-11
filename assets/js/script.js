@@ -12,9 +12,13 @@ async function convertirMoneda() {
   try {
     const pesos = valorInput.value;
     const { value: monedaSeleccionada } = unidadCambio;
-    const valorMoneda = await obtenerApi(monedaSeleccionada);
-    const valorFinal = (pesos / valorMoneda).toFixed(2);
-    span.innerHTML = "Resultado: $" + valorFinal;
+    if (monedaSeleccionada !== "titulo") {
+      const valorMoneda = await obtenerApi(monedaSeleccionada);
+      const valorFinal = (pesos / valorMoneda).toFixed(2);
+      span.innerHTML = "Resultado: $" + valorFinal;
+    } else {
+      alert("Debe seleccionar la Moneda a convertir");
+    }
   } catch (error) {
     alert();
   }

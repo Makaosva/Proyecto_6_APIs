@@ -48,13 +48,10 @@ function renderGrafica(data) {
   };
   const canvas = document.querySelector("#myChar");
   canvas.style.backgroundColor = "white";
-  console.log("Antes de MyChar");
   if (myChart) {
-    console.log("Ingresa a eliminar el Grafico");
     myChart.destroy();
   }
   myChart = new Chart(canvas, config);
-  console.log("despues de new MyChar");
 }
 
 // Formatear la Fecha
